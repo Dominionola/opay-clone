@@ -177,9 +177,6 @@
   }
 }
 @layer utilities {
-  .relative {
-    position: relative;
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -204,9 +201,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
@@ -222,17 +216,23 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-\[50px\] {
+    height: 50px;
+  }
+  .h-\[60px\] {
+    height: 60px;
+  }
   .h-auto {
     height: auto;
-  }
-  .h-screen {
-    height: 100vh;
   }
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-full {
-    width: 100%;
+  .w-\[150px\] {
+    width: 150px;
+  }
+  .w-\[500px\] {
+    width: 500px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -242,6 +242,9 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .items-center {
     align-items: center;
@@ -263,56 +266,38 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-\[url\] {
-    background-color: url;
-  }
   .bg-blue-300 {
     background-color: var(--color-blue-300);
-  }
-  .bg-blue-700 {
-    background-color: var(--color-blue-700);
   }
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\'\.\/assets\/images\/home-mobile\.jpeg\'\)\] {
-    background-image: url('./assets/images/home-mobile.jpeg');
+  .bg-\[url\(\'\/assets\/images\/\'\)\] {
+    background-image: url('/assets/images/');
   }
-  .bg-\[url\(\'\.assets\/images\/home-mobile\.jpeg\'\)\] {
-    background-image: url('.assets/images/home-mobile.jpeg');
+  .bg-\[url\(\'\/assets\/images\/h\'\)\] {
+    background-image: url('/assets/images/h');
+  }
+  .bg-\[url\(\'\/assets\/images\/home\'\)\] {
+    background-image: url('/assets/images/home');
+  }
+  .bg-\[url\(\'\/assets\/images\/home-mobile\'\)\] {
+    background-image: url('/assets/images/home-mobile');
+  }
+  .bg-\[url\(\'\/assets\/images\/home-mobile\.\'\)\] {
+    background-image: url('/assets/images/home-mobile.');
+  }
+  .bg-\[url\(\'\/assets\/images\/home-mobile\.jp\'\)\] {
+    background-image: url('/assets/images/home-mobile.jp');
   }
   .bg-\[url\(\'\/assets\/images\/home-mobile\.jpeg\'\)\] {
     background-image: url('/assets/images/home-mobile.jpeg');
   }
-  .bg-\[url\(\'assets\/images\/home-mobile\.jpeg\'\)\] {
-    background-image: url('assets/images/home-mobile.jpeg');
+  .bg-\[url\(\'\/assets\/images\/home-mobile\.jpg\'\)\] {
+    background-image: url('/assets/images/home-mobile.jpg');
   }
-  .bg-\[url\(\'https\:\/\/files\.opayweb\.com\/file\/video\/home01\.jpg\?x-…at\,jpeg\/resize\,w_2304\,h_918\/imageslim\/interlace\,1\'\)\] {
-    background-image: url('https://files.opayweb.com/file/video/home01.jpg?x-…at,jpeg/resize,w_2304,h_918/imageslim/interlace,1');
-  }
-  .bg-\[url\(\)\] {
-    background-image: url();
-  }
-  .bg-\[url\(ass\)\] {
-    background-image: url(ass);
-  }
-  .bg-\[url\(assets\)\] {
-    background-image: url(assets);
-  }
-  .bg-\[url\(assets\/images\)\] {
-    background-image: url(assets/images);
-  }
-  .bg-\[url\(assets\/images\/\)\] {
-    background-image: url(assets/images/);
-  }
-  .bg-\[url\(assets\/images\/hom\)\] {
-    background-image: url(assets/images/hom);
-  }
-  .bg-\[url\(assets\/images\/home-mobile\)\] {
-    background-image: url(assets/images/home-mobile);
-  }
-  .bg-\[url\(assets\/images\/home-mobile\.jpeg\)\] {
-    background-image: url(assets/images/home-mobile.jpeg);
+  .bg-\[url\(\'\/assets\/images\/home01\.jpg\'\)\] {
+    background-image: url('/assets/images/home01.jpg');
   }
   .bg-cover {
     background-size: cover;
@@ -320,17 +305,14 @@
   .bg-center {
     background-position: center;
   }
+  .object-contain {
+    object-fit: contain;
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-6 {
-    padding: calc(var(--spacing) * 6);
-  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
-  }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -338,14 +320,6 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -358,17 +332,8 @@
   .text-blue-950 {
     color: var(--color-blue-950);
   }
-  .text-gray-100 {
-    color: var(--color-gray-100);
-  }
   .text-gray-700 {
     color: var(--color-gray-700);
-  }
-  .text-red-100 {
-    color: var(--color-red-100);
-  }
-  .text-red-700 {
-    color: var(--color-red-700);
   }
   .text-white {
     color: var(--color-white);
@@ -392,9 +357,29 @@
       display: block;
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
+    }
+  }
+  .md\:h-\[550px\] {
+    @media (width >= 48rem) {
+      height: 550px;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
     }
   }
   .md\:justify-center {
@@ -405,6 +390,36 @@
   .md\:bg-green-300 {
     @media (width >= 48rem) {
       background-color: var(--color-green-300);
+    }
+  }
+  .md\:bg-\[url\(\'\/assets\/images\/home\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/assets/images/home');
+    }
+  }
+  .md\:bg-\[url\(\'\/assets\/images\/home-mobile\.jpg\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/assets/images/home-mobile.jpg');
+    }
+  }
+  .md\:bg-\[url\(\'\/assets\/images\/home0\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/assets/images/home0');
+    }
+  }
+  .md\:bg-\[url\(\'\/assets\/images\/home01\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/assets/images/home01');
+    }
+  }
+  .md\:bg-\[url\(\'\/assets\/images\/home01\.jpg\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/assets/images/home01.jpg');
+    }
+  }
+  .md\:bg-\[url\(\'\/assets\/images\/homeo\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/assets/images/homeo');
     }
   }
   .md\:p-6 {
