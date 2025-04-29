@@ -1,10 +1,10 @@
 // tailwind.config.js
-
-module.exports = {
+export default {
+  content: ["./index.html"], // 👈 very important!
   theme: {
     extend: {
       colors: {
-        opayGreen: "#28C36E", // Your custom color
+        opayGreen: "#00b386",
       },
     },
   },

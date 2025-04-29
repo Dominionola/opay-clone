@@ -264,9 +264,6 @@
   .resize {
     resize: both;
   }
-  .auto-cols-\[300\] {
-    grid-auto-columns: 300;
-  }
   .auto-cols-\[300px\] {
     grid-auto-columns: 300px;
   }
